@@ -1,12 +1,21 @@
 import React from "react";
-import { View, Text ,ScrollView } from "react-native";
+import { SafeAreaView, Text ,ScrollView, Platform , StyleSheet } from "react-native";
 import Home from "@/App-Components/Home";
+import Pokemon from "@/App-Components/Pokemon";
 export default function App() {
   return (
-    <View style={{ flex: 1, backgroundColor: "plum", justifyContent: "center", alignItems: "center", padding:20 }}>
+    <SafeAreaView style = {styles.container}>
       <ScrollView>
-        <Home/>
+        <Pokemon/>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container:{
+    flex:1, 
+    backgroundColor: "#f5f5f5",
+
+  }
+})
